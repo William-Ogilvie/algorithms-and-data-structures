@@ -1,7 +1,7 @@
 """
 Insertion Sort
 ----------------
-Complexity = O(n^2), O(n) if array almost sorted
+Time Complexity = O(n^2), O(n) if array almost sorted
 Sapce = O(1) (in place)
 Stable = Yes
 

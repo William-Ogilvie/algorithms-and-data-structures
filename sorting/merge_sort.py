@@ -1,7 +1,7 @@
 """
 Merge Sort
 ------------
-Complexity = O(n log n) (each merge step linear O(n) and there are O(log n) levels, bc split in 1/2 each time
+Time Complexity = O(n log n) (each merge step linear O(n) and there are O(log n) levels, bc split in 1/2 each time
 Space = O(n) (temporary lists)
 Stable = Yes
 

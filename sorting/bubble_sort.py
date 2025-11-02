@@ -1,7 +1,7 @@
 """
 Bubble Sort
 -------------
-Complexity = O(n^2)
+Time Complexity = O(n^2)
 Space = O(1)
 Stable = Yes (elts with equal keys appear in same relative order in output as in input)
 
