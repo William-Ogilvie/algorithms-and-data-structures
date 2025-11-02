@@ -34,10 +34,9 @@ def selection_sort(arr: list[int]):
                 min = arr[j]
                 min_idx = j
         
-        # Swap arr[i] and arr[min_idx] 
-        tmp = arr[i]
-        arr[i] = arr[min_idx]
-        arr[min_idx] = tmp
+        # Swap arr[i] and arr[min_idx]
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]  
+        
     
     return arr
 

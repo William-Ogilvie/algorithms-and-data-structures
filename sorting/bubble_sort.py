@@ -37,9 +37,8 @@ def bubble_sort(arr: list[int]):
 
             # Check if jth element is larger than (j+1)th element, if true swap elts 
             if arr[j] > arr[j+1]:
-                tmp = arr[j+1]
-                arr[j+1] = arr[j]
-                arr[j] = tmp
+
+                arr[j], arr[j+1] = arr[j+1], arr[j] 
                 # Remember we have swapped a pair
                 swapped = True
 
@@ -62,18 +61,16 @@ print(reverse_sorted)
 time_taken = timeit.timeit(lambda: bubble_sort(test_array), number = 1000)
 print(f"Average time over 1000 runs for a length 10 array: {time_taken} usec")
 
-# Now create two much larger lists
-n1 = int(1e3)
-n2 = int(1e4)
-medium_test_array = [random.randint(-100, 100) for _ in range(n1)]
-larger_test_array = [random.randint(-100, 100) for _ in range(n2)]
+# Length of larger lists
+n1 = int(1e2)
+n2 = int(1e3)
 
-# Time this for the two lists
-time_taken_medium = timeit.timeit(lambda: bubble_sort(medium_test_array), number = 1000)
-time_taken_larger = timeit.timeit(lambda: bubble_sort(larger_test_array), number = 1000)
-print(f"Average time over {n1} runs for a length 100 array: {time_taken_medium} usec")
-print(f"Average time over {n2} runs for a length 1000 arrray: {time_taken_larger} usec")
+# Time this for 100 runs on 100 random lists of length n1 and n2 respectively
+time_taken_medium = timeit.timeit(lambda: bubble_sort([random.randint(-100, 100) for _ in range(n1)]), number = 100)
+time_taken_larger = timeit.timeit(lambda: bubble_sort([random.randint(-100, 100) for _ in range(n2)]), number = 100)
+print(f"Average time over 100 runs for a length {n1} array: {time_taken_medium} usec")
+print(f"Average time over 100 runs for a length {n2} arrray: {time_taken_larger} usec")
 print(f"This has increased by a factor of {time_taken_larger / time_taken_medium} whilst the input has increased by a factor of 10")
-print(f"We don't quite see a O(n^2) growth in the time taken however this is because O(n^2) is the asymptotic limit")
+print(f"We see roughly 100 fold growth in time taken so O(n^2) as expected!")
 
         
