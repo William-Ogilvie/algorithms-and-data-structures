@@ -42,7 +42,7 @@ from sorting_benchmark import basic_benchmark, basic_test
 def heapify(arr, n, i):
     """
     The idea of heapifying is say some element doesn't satisfy the heap property, you then look at it's children 
-    and swap the largest child if needed and continue recursively heapifying the children until you reached the end of the tree
+    and swap the largest child and parent if needed and continue recursively heapifying the children until you reached the end of the tree
     """
 
     largest = i
