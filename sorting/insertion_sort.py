@@ -52,3 +52,4 @@ print(sorted[::-1])
 
 # Run a basic benchmark, n1 = 1e3, n2 = 1e4
 basic_benchmark(int(1e2), int(1e3), insertion_sort)
+print("We see a roughly 100 fold increase in time complexity as we expect! (O(n^2))")
