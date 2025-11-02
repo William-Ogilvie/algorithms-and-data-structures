@@ -2,7 +2,7 @@
 Quick Sort
 ------------
 Time Complexity = Average O(n log n) (same as merge), Worst O(n^2) (bubble, insertion, selection, etc)
-Space = O(log n)
+Space = O(log n) (from recursive function calls, local variables, return addresses etc)
 Stable = No (random pivot)
 
 Description:
