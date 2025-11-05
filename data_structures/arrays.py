@@ -5,6 +5,8 @@ Basic operations, in python arrays are dynamic lists so not of fixed length like
 Continous memory: elts are stored one after the other in memory. 
 Dynamic resizing: when capacity is exceeded python will allocate a new larger array and copy elts over
 Heterogenous types allowed: in python arrays you can mix types
+
+Note in python if you want homogeneous arrays better to use NumPy as faster, particularly lower level operations
 """
 
 import bisect
@@ -47,7 +49,7 @@ arr.remove(10)
 # Time complexity = O(log n), binary search algorithm
 arr[2] = 3
 arr.sort()
-print(bisect.bisect_left(arr, 3))
+print(bisect.bisect_left(arr, 3)) # will return index of 3, so 2
 
 # Length
 # Time complexity = O(1), stored internally, so I guess O(n) to inital compute
